@@ -44,7 +44,7 @@ p {
   background: #155db1;
   position: absolute;
   right: 0;
-  width: 255px;
+  width: 270px;
   height: 100%;
   min-height: 800px;
   color: #fff;
@@ -103,6 +103,7 @@ p {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 15px;
+  color: #fff;
 }
 .sidebar-wrapper .degree {
   font-size: 14px;
@@ -134,7 +135,7 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .languages-list li {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .sidebar-wrapper .languages-list li:last-child {
   margin-bottom: 0;
@@ -143,7 +144,8 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .interests-list li {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  color: #fff;
 }
 .sidebar-wrapper .interests-list li:last-child {
   margin-bottom: 0;
