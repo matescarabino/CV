@@ -1,7 +1,5 @@
 # Mateo Scarabino
 
-Open [Repository](https://github.com/matescarabino/MCGA-Parcial-2).
-
 ## Full Stack Developer - Advanced Systems Engineering Student
 
 ### Run App
