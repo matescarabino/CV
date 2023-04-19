@@ -1,11 +1,4 @@
-/*! 
- * Template Name: Orbit - Bootstrap 5 Resume/CV Template for Developers
- * Version: Bootstrap 5 v1.0
- * Author: Xiaoying Riley
- * Copyright: 3rd Wave Media
- * Twitter: @3rdwave_themes
- * Website: http://themes.3rdwavemedia.com/
-*/
+
 body {
   font-family: "Roboto", sans-serif;
   color: #545E6C;
@@ -20,12 +13,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #f47c03;
+  color: #2196f3;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-  color: #a85502;
+  color: #2196f3;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -40,20 +33,18 @@ p {
 }
 
 .wrapper {
-  background: #FDA246;
+  background: #155db1;
   max-width: 960px;
   margin: 0 auto;
   position: relative;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-wrapper {
-  background: #FDA246;
+  background: #155db1;
   position: absolute;
   right: 0;
-  width: 240px;
+  width: 270px;
   height: 100%;
   min-height: 800px;
   color: #fff;
@@ -78,10 +69,16 @@ p {
   font-size: 16px;
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  width: 100%;
+  border-radius: 50%;
+  border: 8px solid #0c3c72;
+
 }
 .sidebar-wrapper .contact-list .svg-inline--fa {
   margin-right: 5px;
@@ -106,6 +103,7 @@ p {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 15px;
+  color: #fff;
 }
 .sidebar-wrapper .degree {
   font-size: 14px;
@@ -137,7 +135,7 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .languages-list li {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .sidebar-wrapper .languages-list li:last-child {
   margin-bottom: 0;
@@ -146,7 +144,8 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .interests-list li {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  color: #fff;
 }
 .sidebar-wrapper .interests-list li:last-child {
   margin-bottom: 0;
@@ -161,7 +160,7 @@ p {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
-  color: #f47c03;
+  color: #155db1;
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
@@ -172,15 +171,11 @@ p {
   margin-right: 8px;
   display: inline-block;
   color: #fff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background: #f47c03;
+  background: #155db1;
   text-align: center;
   font-size: 16px;
   position: relative;
@@ -214,9 +209,10 @@ p {
   top: 0;
   color: #97AAC3;
 }
-.main-wrapper .company {
+.main-wrapper .company{
   margin-bottom: 10px;
-  color: #97AAC3;
+  color: #6d88ab
+  ;
 }
 .main-wrapper .project-title {
   font-size: 16px;
@@ -231,42 +227,21 @@ p {
   margin-bottom: 15px;
 }
 
-.skillset .item {
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-.skillset .level-title {
-  font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-.skillset .level-bar {
-  height: 12px;
-  background: #f5f5f5;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-.skillset .theme-progress-bar {
-  background: #febb78;
-}
-
 .footer {
   padding: 30px;
   padding-top: 60px;
 }
-.footer .copyright {
-  line-height: 1.6;
-  color: #545E6C;
-  font-size: 13px;
+.contact-container a {
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
-.footer .fa-heart {
-  color: #fb866a;
+
+.contact-container div {
+  margin-bottom: 5px;
+}
+
+.contact-container i {
+  font-size: 5em;
 }
 
 @media (max-width: 767.98px) {
