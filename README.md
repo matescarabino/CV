@@ -1,16 +1,16 @@
 # Mateo Scarabino
 
-## Systems Engineering Graduate - Full Stack Developer
+## Ingeniero en Sistemas Informáticos - Desarrollador Web Full Stack
 
-### About Me
+### Perfil Laboral
 
-Systems Engineer with 3 years of experience as a full-stack web developer. While I have worked on both aspects of web development, I specialize in and particularly enjoy backend development. I excel in problem-solving, creativity, and taking initiative to tackle technical challenges. I am constantly seeking to learn and improve my skills to contribute value to interdisciplinary projects.
+Ingeniero en Sistemas Informáticos con más de 3 años de experiencia como desarrollador web fullstack, especializado y apasionado por el desarrollo backend. Cuento con capacidad para ejecutar proyectos end to end, desde el diseño y la planificación hasta la puesta en marcha e implementación. Me destaco por la resolución de problemas, la creatividad y la iniciativa para enfrentar desafíos técnicos. Busco proyectos que me desafíen técnicamente y me permitan seguir creciendo profesionalmente, aportando valor en equipos interdisciplinarios.
 
-### Run App
+Abrir [https://matescarabino.github.io/CV/](https://matescarabino.github.io/CV/) para ver el CV en el navegador.
 
-Open [https://matescarabino.github.io/CV/](https://matescarabino.github.io/CV/) to view it in the browser.
+## Construido con 🛠️
 
-## Built with 🛠️
+- Next.js
+- TypeScript
+- Tailwind CSS
 
-- HTML
-- CSS

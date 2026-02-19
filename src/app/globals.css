@@ -1,0 +1,426 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #545E6C;
+    background: #f5f5f5;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2196f3;
+    transition: all 0.4s ease-in-out;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.wrapper {
+    background: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 100vh;
+}
+
+.sidebar-wrapper {
+    background: #155db1;
+    width: 270px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.sidebar-wrapper a {
+    color: #fff;
+}
+
+.sidebar-wrapper .profile-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar-wrapper .name {
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.sidebar-wrapper .tagline {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.sidebar-wrapper .profile {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 50%;
+    border: 8px solid #0c3c72;
+}
+
+
+
+.sidebar-wrapper .container-block {
+    padding: 30px;
+}
+
+.sidebar-wrapper .container-block-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.sidebar-wrapper .languages-container .lang-desc {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar-wrapper .interests-list {
+    margin-bottom: 0;
+    padding-left: 15px;
+    list-style-position: outside;
+}
+
+.sidebar-wrapper .interests-list li {
+    margin-bottom: 0px;
+    color: #fff;
+    margin-left: 0;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.sidebar-wrapper .interests-list li::marker {
+    margin-right: 50px;
+}
+
+.sidebar-wrapper .interests-list li:last-child {
+    margin-bottom: 0;
+}
+
+.main-wrapper {
+    background: #fff;
+    padding: 60px;
+    flex-grow: 1;
+}
+
+.main-wrapper .section-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: #155db1;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.main-wrapper .section-title .icon-holder {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    background: #155db1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.main-wrapper .section-title .icon-holder .svg-inline--fa {
+    font-size: 14px;
+}
+
+.main-wrapper .section {
+    margin-bottom: 40px;
+}
+
+.main-wrapper .experiences-section .item {
+    margin-bottom: 30px;
+}
+
+.main-wrapper .upper-row {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+.main-wrapper .job-title {
+    color: #3F4650;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.main-wrapper .time {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #97AAC3;
+}
+
+.main-wrapper .company {
+    margin-bottom: 10px;
+    color: #6d88ab;
+}
+
+
+
+.main-wrapper .experiences-section .details ul li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.contact-container a {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.contact-container div {
+    margin-bottom: 5px;
+}
+
+.contact-container i {
+    font-size: 5em;
+}
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar-wrapper {
+        width: 100%;
+    }
+
+    .main-wrapper {
+        padding: 30px;
+    }
+
+    .main-wrapper .time {
+        position: static;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .main-wrapper .upper-row {
+        margin-bottom: 0;
+    }
+}
+
+@media print {
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: #fff;
+        font-size: 11px;
+        /* Smaller font for print */
+    }
+
+    h1 {
+        font-size: 22px !important;
+        margin-bottom: 5px !important;
+    }
+
+    h2 {
+        font-size: 16px !important;
+        margin-bottom: 5px !important;
+    }
+
+    h3 {
+        font-size: 14px !important;
+        margin-bottom: 2px !important;
+    }
+
+    p,
+    li {
+        line-height: 1.2 !important;
+    }
+
+    .wrapper {
+        box-shadow: none;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        min-height: 100vh !important;
+        /* Ensure wrapper takes full height */
+        height: auto !important;
+        display: flex;
+        flex-direction: row-reverse;
+        /* Simulate sidebar background causing it to extend to the bottom */
+        background: linear-gradient(to left, #155db1 220px, #fff 220px) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .sidebar-wrapper {
+        background: transparent !important;
+        /* Let gradient show through */
+        height: auto;
+        min-height: 100vh !important;
+        width: 220px;
+        flex-shrink: 0;
+    }
+
+    .sidebar-wrapper .profile-container {
+        padding: 15px !important;
+    }
+
+    .sidebar-wrapper .profile {
+        width: 140px !important;
+        /* Increased from 100px */
+        height: 140px !important;
+        border-width: 4px !important;
+    }
+
+    .sidebar-wrapper .container-block {
+        padding: 15px !important;
+    }
+
+    .sidebar-wrapper .container-block-title {
+        margin-bottom: 5px !important;
+    }
+
+    .sidebar-wrapper .interests-list li {
+        margin-bottom: 2px !important;
+    }
+
+    .main-wrapper {
+        padding: 20px !important;
+        /* Reduced padding */
+        padding-top: 25px !important;
+        flex-grow: 1;
+        background: transparent !important;
+    }
+
+    .main-wrapper .section {
+        margin-bottom: 15px !important;
+        /* Reduced section spacing */
+    }
+
+    .main-wrapper .section-title {
+        font-size: 16px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .main-wrapper .section-title .icon-holder {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .main-wrapper .section-title .icon-holder svg,
+    .main-wrapper .section-title .icon-holder i {
+        font-size: 12px !important;
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .main-wrapper .experiences-section .item {
+        margin-bottom: 10px !important;
+        /* Reduced item spacing */
+    }
+
+    .main-wrapper .experiences-section .details ul li {
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .print-button {
+        display: none !important;
+    }
+
+    /* Fix date positioning */
+    .main-wrapper .upper-row {
+        position: relative !important;
+        margin-bottom: 2px !important;
+    }
+
+    .main-wrapper .time {
+        position: absolute !important;
+        right: 0 !important;
+        top: 0 !important;
+        display: block !important;
+        margin-top: 0 !important;
+        color: #97AAC3 !important;
+        font-size: 11px !important;
+    }
+
+    /* Prevent page breaks inside items if possible */
+    .section,
+    .item {
+        break-inside: avoid;
+    }
+
+    /* Fix Link Colors */
+    a {
+        text-decoration: none !important;
+        color: #2196f3 !important;
+        /* Force blue color */
+    }
+
+    .contact-container a {
+        color: #fff !important;
+        /* Keep contact links white in sidebar */
+    }
+}
