@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { getAssetPath } from "@/utils/path";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function RootLayout({
           rel="stylesheet"
           type="text/css"
         />
-        <script defer src="/assets/fontawesome/js/all.min.js"></script>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script defer src={getAssetPath("/assets/fontawesome/js/all.min.js")}></script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>

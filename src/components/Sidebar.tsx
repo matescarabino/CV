@@ -1,4 +1,5 @@
 import { CVData } from "@/data/cv_data";
+import { getAssetPath } from "@/utils/path";
 
 
 interface SidebarProps {
@@ -11,7 +12,7 @@ export default function Sidebar({ data }: SidebarProps) {
       <div className="profile-container">
         <img
             className="profile"
-            src={data.image}
+            src={getAssetPath(data.image)}
             alt="Profile Picture"
         />
        
