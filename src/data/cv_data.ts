@@ -49,9 +49,9 @@ export interface CVData {
           items: string[];
         };
         link?: {
-            url: string;
-            text: string;
-        }
+          url: string;
+          text: string;
+        };
       }[];
     };
     courses: {
@@ -63,6 +63,19 @@ export interface CVData {
         certificate?: {
           url: string;
           code: string;
+        };
+      }[];
+    };
+    personalProjects: {
+      title: string;
+      items: {
+        title: string;
+        time: string;
+        role: string;
+        details: string[];
+        link?: {
+          url: string;
+          text: string;
         };
       }[];
     };
@@ -96,15 +109,15 @@ export const cvDataEs: CVData = {
       {
         name: "Ingles",
         items: [
-            {
-                level: "(Alto)",
-                details: ["Reading/Listening/Writing"],
-            },
-            {
-                level: "(Medio)",
-                details: ["Speaking"],
-            }
-        ]
+          {
+            level: "(Alto)",
+            details: ["Reading/Listening/Writing"],
+          },
+          {
+            level: "(Medio)",
+            details: ["Speaking"],
+          },
+        ],
       },
     ],
   },
@@ -126,19 +139,30 @@ export const cvDataEs: CVData = {
             text: "Descargar Proyecto Final.",
           },
         },
-        // {
-        //   title: "Bachiller en Ciencias Naturales",
-        //   time: "2015 - Rosario, Argentina.",
-        //   institution: "Colegio Stella Maris de Fisherton",
-        // },
+        {
+          title: "Bachiller en Ciencias Naturales",
+          time: "2015 - Rosario, Argentina.",
+          institution: "Colegio Stella Maris de Fisherton",
+        },
       ],
     },
     experience: {
       title: "Experiencia",
       items: [
         {
+          title: "Rosental Inversiones",
+          time: "Abril 2026 -  Actualidad",
+          details: [
+            "• Implementación de soluciones tecnológicas para optimizar procesos en múltiples áreas.",
+            "• Identificación de oportunidades de mejora y automatización en operaciones internas.",
+            "• Desarrollo de herramientas que incrementan la productividad y reducen errores operativos.",
+            "• Trabajo transversal con equipos de negocio para alinear tecnología con objetivos estratégicos.",
+            "• Impulso de iniciativas de transformación digital dentro de la organización.",
+          ],
+        },
+        {
           title: "Radium Rocket - Software Factory",
-          time: "Febrero 2023 - Actualidad",
+          time: "Febrero 2023 - Febrero 2026",
           details: [
             "Desarrollador Web Full Stack. Diseño, desarrollo y mantenimiento de múltiples proyectos internos y para clientes externos de diferentes industrias. Mi trabajo abarcó frontend, backend y bases de datos.",
             "En total formé parte de más de 10 proyectos en rubros como ecommerce, fintech, agro, realidad virtual, noticias y gestión administrativa, utilizando principalmente <strong>TypeScript, Node.js, React, Next.js</strong> y bases de datos <strong>SQL (PostgreSQL, SQL Server)</strong> y <strong>NoSQL (MongoDB)</strong>.",
@@ -158,15 +182,15 @@ export const cvDataEs: CVData = {
             ],
           },
           link: {
-              url: "https://radiumrocket.com/",
-              text: "Más Información"
-          }
+            url: "https://radiumrocket.com/",
+            text: "Más Información",
+          },
         },
         {
           title: "Bootcamp - Radium Rocket",
           time: "Agosto 2022 - Diciembre 2022",
           details: [
-            "Become a Software Professional: Simulación de trabajo de desarrollo real. Meets diarias, clases y trabajo semanal en distintos lenguajes junto a empleados de la empresa. <a href='PDFs/Certificado_RR.pdf' download target='new'>Descargar certificado</a>",
+            "Become a Software Professional: Simulación de trabajo de desarrollo real. Meets diarias, clases y trabajo semanal en distintos lenguajes junto a empleados de la empresa.<br /><a href='PDFs/Certificado_RR.pdf' download target='new'>Descargar certificado</a>",
           ],
         },
         {
@@ -184,6 +208,7 @@ export const cvDataEs: CVData = {
           ],
         },
       ],
+      
     },
     courses: {
       title: "Cursos",
@@ -206,6 +231,25 @@ export const cvDataEs: CVData = {
           title: "Javascript",
           time: "2022",
           institution: "CoderHouse",
+        },
+      ],
+    },
+    personalProjects: {
+      title: "Proyectos Personales",
+      items: [
+        {
+          title: "LaJuntada",
+          time: "Enero 2026 - Actualidad",
+          role: "Prompt Engineer y Product Builder con IA",
+          details: [
+            "Diseño y desarrollo de una aplicación <strong>mobile-first.</strong>",
+            "Definición integral del producto, incluyendo alcance funcional, arquitectura, modelo de datos y experiencia de usuario. Desarrollo del proyecto utilizando herramientas de IA para acelerar el proceso de implementación, iteración y validación técnica. Implementación con <strong>Next.js, Supabase, Firebase y PostgreSQL</strong>, con despliegue en <strong>Vercel</strong>.",
+            "Actualmente en etapa de testing y en proceso de revisión por Google para su publicación en Play Store.",
+          ],
+          link: {
+            url: "https://lajuntada.com",
+            text: "Ver app en funcionamiento",
+          },
         },
       ],
     },
@@ -240,15 +284,15 @@ export const cvDataEn: CVData = {
       {
         name: "English",
         items: [
-            {
-                level: "(Advanced)",
-                details: ["Reading/Listening/Writing"],
-            },
-            {
-                level: "(Intermediate)",
-                details: ["Speaking"],
-            }
-        ]
+          {
+            level: "(Advanced)",
+            details: ["Reading/Listening/Writing"],
+          },
+          {
+            level: "(Intermediate)",
+            details: ["Speaking"],
+          },
+        ],
       },
     ],
   },
@@ -265,7 +309,7 @@ export const cvDataEn: CVData = {
           title: "Information Systems Engineering",
           time: "2023 - Rosario, Argentina.",
           institution: "Universidad Abierta Interamericana - UAI",
-           link: {
+          link: {
             url: "PDFs/ProyectoFinal_ScarabinoMateo.pdf",
             text: "Download Final Project.",
           },
@@ -302,15 +346,15 @@ export const cvDataEn: CVData = {
             ],
           },
           link: {
-              url: "https://radiumrocket.com/",
-              text: "More Information"
-          }
+            url: "https://radiumrocket.com/",
+            text: "More Information",
+          },
         },
         {
           title: "Bootcamp - Radium Rocket",
           time: "August 2022 - December 2022",
           details: [
-            "Become a Software Professional: Real development job simulation. Daily meets, classes and weekly work in different languages together with company employees. <a href='PDFs/Certificado_RR.pdf' download target='new'>Download Certificate</a>",
+            "Become a Software Professional: Real development job simulation. Daily meets, classes and weekly work in different languages together with company employees.<br /><a href='PDFs/Certificado_RR.pdf' download target='new'>Download Certificate</a>",
           ],
         },
         {
@@ -350,6 +394,26 @@ export const cvDataEn: CVData = {
           title: "Javascript",
           time: "2022",
           institution: "CoderHouse",
+        },
+      ],
+    },
+    personalProjects: {
+      title: "Personal Projects",
+      items: [
+        {
+          title: "LaJuntada",
+          time: "2025 - Present",
+          role: "Prompt Engineer and AI Product Builder",
+          details: [
+            "Led end-to-end product planning: feature scope, architecture, data model and screen design.",
+            "Drove full development together with a development AI (Antigravity), defining prompts, iterations, technical validations and testing workflows.",
+            "Built the solution with a <strong>mobile-first</strong> approach using <strong>Next.js, Supabase, Firebase and PostgreSQL</strong>, and handled deployment on <strong>Vercel</strong>.",
+            "The project is currently in testing and under Google review for Play Store release.",
+          ],
+          link: {
+            url: "https://lajuntada.com",
+            text: "Live webapp",
+          },
         },
       ],
     },

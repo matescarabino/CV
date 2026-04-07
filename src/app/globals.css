@@ -66,7 +66,7 @@ p {
 
 .sidebar-wrapper {
     background: #155db1;
-    width: 270px;
+    width: 250px;
     color: #fff;
     flex-shrink: 0;
 }
@@ -236,34 +236,157 @@ p {
     font-size: 5em;
 }
 
-@media (max-width: 767.98px) {
-    .wrapper {
-        flex-direction: column;
-    }
+.print-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    border: 1px solid #155db1;
+    border-radius: 999px;
+    background: #fff;
+    color: #155db1;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.1;
+    transition: opacity 0.2s ease-in-out;
+}
 
-    .sidebar-wrapper {
-        width: 100%;
-    }
+.print-button:hover,
+.print-button:focus {
+    opacity: 1;
+}
 
-    .main-wrapper {
-        padding: 30px;
-    }
+body.pdf-export {
+    margin: 0;
+    background: #fff;
+    font-size: 11px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
 
-    .main-wrapper .time {
-        position: static;
-        display: block;
-        margin-top: 5px;
-    }
+body.pdf-export h1 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
 
-    .main-wrapper .upper-row {
-        margin-bottom: 0;
-    }
+body.pdf-export h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+body.pdf-export h3 {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+body.pdf-export p,
+body.pdf-export li {
+    line-height: 1.2;
+}
+
+body.pdf-export .wrapper {
+    box-shadow: none;
+    max-width: none;
+    width: calc(210mm + 1px);
+    margin: 0;
+    min-height: 297mm;
+    display: flex;
+    flex-direction: row-reverse;
+    background: #fff;
+    overflow: hidden;
+}
+
+body.pdf-export .sidebar-wrapper {
+    background: #155db1;
+    width: 54mm;
+    flex-shrink: 0;
+}
+
+body.pdf-export .sidebar-wrapper .profile-container,
+body.pdf-export .sidebar-wrapper .container-block {
+    padding: 12px;
+}
+
+body.pdf-export .sidebar-wrapper .profile {
+    width: 35mm;
+    height: 35mm;
+    border-width: 4px;
+}
+
+body.pdf-export .sidebar-wrapper .container-block-title {
+    margin-bottom: 5px;
+}
+
+body.pdf-export .sidebar-wrapper .interests-list li {
+    margin-bottom: 2px;
+}
+
+body.pdf-export .main-wrapper {
+    padding: 12mm 10mm;
+    flex-grow: 1;
+    background: #fff;
+}
+
+body.pdf-export .main-wrapper .section {
+    margin-bottom: 15px;
+}
+
+body.pdf-export .main-wrapper .section-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+body.pdf-export .main-wrapper .experiences-section .item {
+    margin-bottom: 10px;
+}
+
+body.pdf-export .main-wrapper .experiences-section .details ul li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+body.pdf-export .main-wrapper .upper-row {
+    position: relative;
+    margin-bottom: 2px;
+}
+
+body.pdf-export .main-wrapper .time {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    color: #97AAC3;
+    font-size: 11px;
+}
+
+body.pdf-export .section,
+body.pdf-export .item {
+    break-inside: avoid-page;
+}
+
+body.pdf-export .personal-projects-section {
+    break-before: auto;
+}
+
+body.pdf-export .print-button {
+    display: none;
+}
+
+body.pdf-export a {
+    text-decoration: none;
+    color: #2196f3;
+}
+
+body.pdf-export .contact-container a {
+    color: #fff;
 }
 
 @media print {
     @page {
-        margin: 0;
-        size: auto;
+        size: A4 portrait;
+        margin: 10mm;
     }
 
     body {
@@ -271,21 +394,20 @@ p {
         print-color-adjust: exact !important;
         background: #fff;
         font-size: 11px;
-        /* Smaller font for print */
     }
 
     h1 {
-        font-size: 22px !important;
+        font-size: 21px !important;
         margin-bottom: 5px !important;
     }
 
     h2 {
-        font-size: 16px !important;
+        font-size: 15px !important;
         margin-bottom: 5px !important;
     }
 
     h3 {
-        font-size: 14px !important;
+        font-size: 13px !important;
         margin-bottom: 2px !important;
     }
 
@@ -296,42 +418,37 @@ p {
 
     .wrapper {
         box-shadow: none;
-        max-width: 100%;
-        width: 100%;
+        max-width: none;
+        width: 190mm;
         margin: 0;
-        min-height: 100vh !important;
-        /* Ensure wrapper takes full height */
-        height: auto !important;
+        min-height: 277mm;
         display: flex;
         flex-direction: row-reverse;
-        /* Simulate sidebar background causing it to extend to the bottom */
-        background: linear-gradient(to left, #155db1 220px, #fff 220px) !important;
+        background: #fff !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
 
     .sidebar-wrapper {
-        background: transparent !important;
-        /* Let gradient show through */
+        background: #155db1 !important;
         height: auto;
-        min-height: 100vh !important;
-        width: 220px;
+        min-height: auto !important;
+        width: 54mm;
         flex-shrink: 0;
     }
 
     .sidebar-wrapper .profile-container {
-        padding: 15px !important;
+        padding: 12px !important;
     }
 
     .sidebar-wrapper .profile {
-        width: 140px !important;
-        /* Increased from 100px */
-        height: 140px !important;
+        width: 35mm !important;
+        height: 35mm !important;
         border-width: 4px !important;
     }
 
     .sidebar-wrapper .container-block {
-        padding: 15px !important;
+        padding: 12px !important;
     }
 
     .sidebar-wrapper .container-block-title {
@@ -343,20 +460,17 @@ p {
     }
 
     .main-wrapper {
-        padding: 20px !important;
-        /* Reduced padding */
-        padding-top: 25px !important;
+        padding: 12mm 10mm !important;
         flex-grow: 1;
-        background: transparent !important;
+        background: #fff !important;
     }
 
     .main-wrapper .section {
         margin-bottom: 15px !important;
-        /* Reduced section spacing */
     }
 
     .main-wrapper .section-title {
-        font-size: 16px !important;
+        font-size: 14px !important;
         margin-bottom: 5px !important;
     }
 
@@ -378,7 +492,6 @@ p {
 
     .main-wrapper .experiences-section .item {
         margin-bottom: 10px !important;
-        /* Reduced item spacing */
     }
 
     .main-wrapper .experiences-section .details ul li {
@@ -390,7 +503,6 @@ p {
         display: none !important;
     }
 
-    /* Fix date positioning */
     .main-wrapper .upper-row {
         position: relative !important;
         margin-bottom: 2px !important;
@@ -406,21 +518,21 @@ p {
         font-size: 11px !important;
     }
 
-    /* Prevent page breaks inside items if possible */
     .section,
     .item {
-        break-inside: avoid;
+        break-inside: avoid-page;
     }
 
-    /* Fix Link Colors */
+    .personal-projects-section {
+        break-before: page;
+    }
+
     a {
         text-decoration: none !important;
         color: #2196f3 !important;
-        /* Force blue color */
     }
 
     .contact-container a {
         color: #fff !important;
-        /* Keep contact links white in sidebar */
     }
 }

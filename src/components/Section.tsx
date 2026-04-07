@@ -9,9 +9,9 @@ export default function Section({ title, iconClass, children, className = "" }: 
   return (
     <section className={`section ${className}`}>
       <h2 className="section-title">
-        <span className="icon-holder">
+        {/* <span className="icon-holder">
           <i className={iconClass}></i>
-        </span>
+        </span> */}
         {title}
       </h2>
       {children}
